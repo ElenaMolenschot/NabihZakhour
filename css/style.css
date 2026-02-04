@@ -118,6 +118,19 @@ h2 {
     color: var(--color-white);
 }
 
+.btn--outline-light {
+    background: transparent;
+    color: var(--color-black);
+    border: 2px solid var(--color-black);
+    border-radius: 4px;
+}
+
+.btn--outline-light:hover {
+    background: #5083E0;
+    border-color: #5083E0;
+    color: var(--color-white);
+}
+
 /* Tilted rectangle behind button */
 .btn-tilted-wrap {
     position: relative;
