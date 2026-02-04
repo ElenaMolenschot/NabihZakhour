@@ -287,22 +287,33 @@ h2 {
     position: relative;
 }
 
+.about__photo-frame {
+    display: inline-block;
+    padding: 14px 14px 14px 14px;
+    background: var(--color-white);
+    box-shadow: 2px 4px 18px rgba(0, 0, 0, 0.13);
+    transform: rotate(-2deg);
+    position: relative;
+}
+
 .about__portrait {
     width: 100%;
     height: auto;
     object-fit: cover;
+    filter: grayscale(100%);
 }
 
 .about__label {
     font-family: var(--font-script);
     font-size: 9.5rem;
-    color: #5083e0;
+    color: #6e9eef;
     position: absolute;
-    bottom: -30px;
+    bottom: -50px;
     left: -10px;
     line-height: 1;
     pointer-events: none;
     z-index: 2;
+    transform: rotate(2deg);
 }
 
 .about__content {
