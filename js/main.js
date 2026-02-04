@@ -20,6 +20,42 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Contact form submission via Formspree
+  document.querySelectorAll('.get-in-touch__form').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('.get-in-touch__form-btn');
+      var status = form.querySelector('.get-in-touch__form-status');
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      status.style.display = 'none';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (response) {
+        if (response.ok) {
+          status.textContent = 'Message sent! I\'ll get back to you soon.';
+          status.className = 'get-in-touch__form-status get-in-touch__form-status--success';
+          status.style.display = 'block';
+          form.reset();
+        } else {
+          return response.json().then(function (data) {
+            throw new Error(data.errors ? data.errors.map(function (err) { return err.message; }).join(', ') : 'Submission failed');
+          });
+        }
+      }).catch(function (err) {
+        status.textContent = 'Something went wrong. Please try again or email directly.';
+        status.className = 'get-in-touch__form-status get-in-touch__form-status--error';
+        status.style.display = 'block';
+      }).finally(function () {
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
+      });
+    });
+  });
+
   // Smooth scroll offset for fixed header
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {

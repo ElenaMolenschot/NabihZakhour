@@ -606,7 +606,7 @@ h2 {
 .get-in-touch__icon {
     font-size: 1.6rem;
     margin-bottom: 6px;
-    color: #5083e0;
+    color: black;
 }
 
 .get-in-touch__card strong {
@@ -619,7 +619,7 @@ h2 {
 .get-in-touch__card span {
     font-family: var(--font-sans);
     font-size: 0.85rem;
-    color: #5083e0;
+    color: black;
     text-decoration: none;
 }
 
@@ -690,6 +690,28 @@ h2 {
 .get-in-touch__form-btn:hover {
     background: #3a6cc5;
     color: var(--color-white);
+}
+
+.get-in-touch__form-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.get-in-touch__form-status {
+    margin-top: 12px;
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.get-in-touch__form-status--success {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.get-in-touch__form-status--error {
+    background: #fce4ec;
+    color: #c62828;
 }
 
 /* =========================================

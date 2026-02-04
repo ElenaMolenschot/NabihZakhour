@@ -14,6 +14,8 @@
             href="https://fonts.googleapis.com/css2?family=Seaweed+Script&family=Sen:wght@400;500;600;700;800&display=swap"
             rel="stylesheet"
         />
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
@@ -141,7 +143,7 @@
                             >
                         </div>
                     </div>
-                    <form class="get-in-touch__form" onsubmit="return false;">
+                    <form class="get-in-touch__form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                         <label class="get-in-touch__form-label" for="git-name"
                             >Name</label
                         >
@@ -149,7 +151,9 @@
                             class="get-in-touch__form-input"
                             type="text"
                             id="git-name"
+                            name="name"
                             placeholder="Your name"
+                            required
                         />
                         <label class="get-in-touch__form-label" for="git-email"
                             >Email</label
@@ -158,7 +162,9 @@
                             class="get-in-touch__form-input"
                             type="email"
                             id="git-email"
+                            name="email"
                             placeholder="your.email@example.com"
+                            required
                         />
                         <label
                             class="get-in-touch__form-label"
@@ -168,12 +174,15 @@
                         <textarea
                             class="get-in-touch__form-textarea"
                             id="git-message"
+                            name="message"
                             rows="5"
                             placeholder="Tell me about what brought you here..."
+                            required
                         ></textarea>
                         <button class="get-in-touch__form-btn" type="submit">
                             Send Message
                         </button>
+                        <p class="get-in-touch__form-status" style="display:none;"></p>
                     </form>
                 </div>
             </div>
