@@ -89,6 +89,23 @@ h2 {
     color: var(--color-white);
 }
 
+.btn--light {
+    background: #EEF4F9;
+    color: var(--color-black);
+    border: 2px solid #EEF4F9;
+    border-radius: 4px;
+}
+
+.btn--light:hover {
+    background: #dce8f3;
+    border-color: #dce8f3;
+}
+
+.btn--small {
+    font-size: 0.7rem;
+    padding: 10px 22px;
+}
+
 .btn--outline {
     background: #5083e0;
     color: var(--color-white);
@@ -263,6 +280,14 @@ h2 {
     color: var(--color-gray);
     margin-bottom: 32px;
     line-height: 1.6;
+}
+
+.hero__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
 /* =========================================
@@ -584,6 +609,81 @@ h2 {
 }
 
 /* =========================================
+   About Page
+   ========================================= */
+
+.about-page-hero {
+    margin-top: var(--header-height);
+    background: #eef4f9;
+    padding: 60px 24px;
+    text-align: center;
+}
+
+.about-page-hero__inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.about-page-hero__title {
+    font-family: var(--font-script);
+    font-size: 4rem;
+    color: #5083e0;
+    margin-bottom: 12px;
+}
+
+.about-page-hero__subtitle {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--color-gray);
+}
+
+.about-page {
+    padding: 60px 24px;
+    background: var(--color-white);
+}
+
+.about-page__inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.about-page__image-wrapper {
+    flex: 0 0 35%;
+    position: sticky;
+    top: calc(var(--header-height) + 24px);
+}
+
+.about-page__content {
+    flex: 1;
+}
+
+.about-page__content h2 {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+    margin-top: 32px;
+}
+
+.about-page__content h2:first-child {
+    margin-top: 0;
+}
+
+.about-page__content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    color: var(--color-black);
+}
+
+.about-page__cta {
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* =========================================
    Responsive Design
    ========================================= */
 
@@ -615,6 +715,17 @@ h2 {
 
     .about__label {
         font-size: 4rem;
+    }
+
+    .about-page__inner {
+        flex-direction: column;
+    }
+
+    .about-page__image-wrapper {
+        flex: none;
+        max-width: 350px;
+        margin: 0 auto;
+        position: static;
     }
 
     .articles__grid {
