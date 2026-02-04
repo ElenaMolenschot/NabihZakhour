@@ -90,9 +90,9 @@ h2 {
 }
 
 .btn--light {
-    background: #EEF4F9;
+    background: #eef4f9;
     color: var(--color-black);
-    border: 2px solid #EEF4F9;
+    border: 2px solid #eef4f9;
     border-radius: 4px;
 }
 
@@ -126,8 +126,8 @@ h2 {
 }
 
 .btn--outline-light:hover {
-    background: #5083E0;
-    border-color: #5083E0;
+    background: #5083e0;
+    border-color: #5083e0;
     color: var(--color-white);
 }
 
@@ -361,7 +361,7 @@ h2 {
 
 .about__content p {
     font-size: 0.95rem;
-    line-height: 1.7;
+    line-height: 0.7;
     margin-bottom: 16px;
     color: var(--color-black);
 }
